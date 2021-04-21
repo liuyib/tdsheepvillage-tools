@@ -1,6 +1,7 @@
 {
   "name": "tdsheepvillage-tools",
   "version": "0.0.1",
+  "homepage": "./",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "antd": "^4.15.2",
