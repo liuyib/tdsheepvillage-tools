@@ -1,12 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './pages/Home/index'
 import NotFound from './pages/404'
 import 'antd/dist/antd.css'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -18,6 +18,6 @@ export default function App() {
           <Redirect to="/404" />
         </Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
