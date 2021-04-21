@@ -1,0 +1,38 @@
+.form {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 10px !important;
+  text-align: center;
+}
+
+.form-item {
+  margin: 0 !important;
+}
+
+.form-space {
+  display: 'flex';
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  text-align: center;
+}
+
+.form-price {
+  width: 110px;
+  text-align: left;
+}
+
+.form-btn-add {
+  margin-top: 15px;
+}
+
+.icon-minus {
+  font-size: 22px;
+  color: red !important;
+}
