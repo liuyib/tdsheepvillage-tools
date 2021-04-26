@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { Form, InputNumber, Button, Space, Select } from 'antd'
+import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 import './index.css'
 import config from '../../config'
 import towerData from '../../data/tower'
-import { Form, InputNumber, Button, Space, Select } from 'antd'
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons'
 
 const { Option } = Select
 const { towers } = config
