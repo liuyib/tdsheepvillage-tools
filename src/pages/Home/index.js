@@ -20,9 +20,12 @@ const Home = () => {
     const _prices = []
     let _total = 0
 
-    towers.forEach((val, index) => {
-      const { select, level, count } = val
+    for (let index = 0; index < towers.length; index++) {
+      const { select, level, count } = towers[index]
       const tower = towerData[select]
+
+      if (!tower) break
+
       let price = 0
 
       // 更换塔类型时，等级变得不合法
@@ -38,7 +41,7 @@ const Home = () => {
 
       _total += price
       _prices.push(price)
-    })
+    }
 
     setTotal(_total)
     setPrices(_prices)
@@ -133,12 +136,16 @@ const Home = () => {
                     label="价值"
                     name={[field.name, 'price']}
                     fieldKey={[field.fieldKey, 'price']}
+                    initialValue={0}
                   >
-                    <div>{prices[index]}</div>
+                    <div>price: {prices[index]}</div>
                   </Form.Item>
                   <MinusCircleOutlined
                     className="icon-minus"
-                    onClick={() => remove(field.name)}
+                    onClick={() => {
+                      remove(field.name)
+                      onSubmit()
+                    }}
                   />
                 </Space>
               )
