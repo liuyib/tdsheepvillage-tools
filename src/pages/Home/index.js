@@ -138,7 +138,7 @@ const Home = () => {
                     fieldKey={[field.fieldKey, 'price']}
                     initialValue={0}
                   >
-                    <div>price: {prices[index]}</div>
+                    <div>{prices[index]}</div>
                   </Form.Item>
                   <MinusCircleOutlined
                     className="icon-minus"
