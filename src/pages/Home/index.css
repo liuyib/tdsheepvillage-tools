@@ -1,6 +1,6 @@
 .form {
   max-width: 768px;
-  margin: 0 auto;
+  margin: 0 auto !important;
   padding: 10px !important;
   text-align: center;
 }
