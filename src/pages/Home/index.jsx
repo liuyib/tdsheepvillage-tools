@@ -66,12 +66,12 @@ const Home = () => {
                 <Space key={field.key} className="form-space" align="middle">
                   <Form.Item
                     {...field}
-                    className="form-item"
+                    className="form-item form-select"
                     name={[field.name, 'select']}
                     fieldKey={[field.fieldKey, 'select']}
                     initialValue={towers[0].value}
                   >
-                    <Select style={{ width: '90px' }} onChange={onSubmit}>
+                    <Select className="form-select__elem" onChange={onSubmit}>
                       {towers.map((item) => (
                         <Option key={item.value} value={item.value}>
                           {item.label}
@@ -97,7 +97,8 @@ const Home = () => {
                         <Form.Item
                           {...field}
                           className="form-item"
-                          label="等级"
+                          label="等级:"
+                          colon={false}
                           name={[field.name, 'level']}
                           fieldKey={[field.fieldKey, 'level']}
                           initialValue={1}
@@ -117,7 +118,8 @@ const Home = () => {
                   <Form.Item
                     {...field}
                     className="form-item"
-                    label="个数"
+                    label="个数:"
+                    colon={false}
                     name={[field.name, 'count']}
                     fieldKey={[field.fieldKey, 'count']}
                     initialValue={1}
@@ -132,8 +134,9 @@ const Home = () => {
                   </Form.Item>
                   <Form.Item
                     {...field}
-                    className="form-item form-price"
-                    label="价值"
+                    className="form-item"
+                    label="价值:"
+                    colon={false}
                     name={[field.name, 'price']}
                     fieldKey={[field.fieldKey, 'price']}
                     initialValue={0}
